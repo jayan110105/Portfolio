@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { handleSubmit } from '@/app/actions'
@@ -20,6 +21,19 @@ const SocialIcon = ({ href, icon: Icon }: { href: string; icon: IconType }) => (
 )
 
 const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsLoading(true);
+    const formData = new FormData(event.currentTarget);
+    await handleSubmit(formData);
+    setIsLoading(false);
+    if (formRef.current) {
+      formRef.current.reset(); // Clear the form fields
+    }
+  };
 
   return (
     <section id="contact" className="py-20 bg-gray-50">
@@ -62,7 +76,7 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <form action={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={onSubmit} className="space-y-6">
               <div>
                 <input
                   type="text"
@@ -96,7 +110,14 @@ const Contact = () => {
                 whileTap={{ scale: 0.98 }}
                 className="w-full px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
               >
-                SEND MESSAGE
+                {isLoading ? (
+                  <svg className="animate-spin h-5 w-5 mx-auto" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                ) : (
+                  'SEND MESSAGE'
+                )}
               </motion.button>
             </form>
           </motion.div>
