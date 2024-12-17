@@ -1,6 +1,6 @@
 'use client'
 
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaFileAlt } from "react-icons/fa";
 import { FaFlutter } from "react-icons/fa6";
 import { SiTensorflow } from "react-icons/si";
 import FloatingElements from "./ui/floating-elements";
@@ -51,18 +51,25 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <a
-            href="#projects"
-            className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors inline-flex items-center justify-center"
+          <motion.a
+            href="/resume.pdf" // Replace with the actual path to your CV
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors inline-flex items-center justify-center group"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            View My Work
-          </a>
-          <a
+            Resume
+            <FaFileAlt className="ml-2 group-hover:rotate-12 transition-transform" />
+          </motion.a>
+          <motion.a
             href="#contact"
-            className="bg-white text-black border-2 border-black px-8 py-3 rounded-full hover:bg-gray-50 transition-colors inline-flex items-center justify-center"
+            className="bg-white text-black border-2 border-black px-8 py-3 rounded-full hover:bg-gray-50 transition-colors inline-flex items-center justify-center group"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             Get in Touch
-          </a>
+          </motion.a>
         </motion.div>
       </div>
     </section>
