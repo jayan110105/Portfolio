@@ -15,7 +15,7 @@ const Projects = () => {
           image: maternalHealth,
           technologies: ["Next.js", "Prisma", "PostgreSQL", "FastAPI"],
           links: {
-            website: "https://maternal-health.vercel.app",
+            website: "https://mom-care.vercel.app/",
             source: "https://github.com/jayan110105/MomCare"
           }
         },
