@@ -57,7 +57,7 @@ const Experience = () => {
           date: "August 2024 – Present",
           title: "Research Intern",
           location: "Samsung PRISM",
-          description: "Designed solutions for user health identification using smart home data in the IoT domain. Developed real-time systems for patient monitoring, mental health tracking, fall detection, and personalized wellness management."
+          description: "Designed solutions for user health identification using smart home data in the IoT domain. Developed models for patient monitoring, fall detection, and anomaly detection."
         },
         {
           logo: insight,

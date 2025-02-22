@@ -11,7 +11,7 @@ const Projects = () => {
         {
           title: "Maternal Healthcare Web App",
           date: "December 2023 - Present",
-          description: "Built a web platform for maternal healthcare with machine learning models for risk prediction, anxiety detection, and diet recommendations. Integrated an interactive chatbot using Llama APIs.",
+          description: "Built a scalable healthcare platform featuring an AI-powered chatbot for real-time, personalized healthcare interactions. It also leverages machine learning to predict health risks, detect anxiety, and offer tailored medical recommendations.",
           image: maternalHealth,
           technologies: ["Next.js", "Prisma", "PostgreSQL", "FastAPI"],
           links: {
@@ -22,9 +22,9 @@ const Projects = () => {
         {
           title: "Ophthalmology EMR App",
           date: "September 2023 - November 2023",
-          description: "Developed an EMR app to simplify ophthalmology data documentation for clinical and research purposes. Implemented real-time data management with Firebase and offline storage.",
+          description: "Developed an EMR app to streamline ophthalmology data documentation for clinical and research use, reducing patient registration to examination time by over 50%. The app supports offline functionality, making it ideal for medical camps with limited internet access.",
           image: opthadoc,
-          technologies: ["Flutter", "Firebase", "Hive"],
+          technologies: ["Flutter", "SQLite"],
           links: {
             source: "https://github.com/jayan110105/OpthaDoc"
           }
@@ -32,7 +32,7 @@ const Projects = () => {
         {
           title: "Urban Scene Understanding",
           date: "June 2023 - August 2023",
-          description: "Created a semantic segmentation model with 84% accuracy using CityScapes DashCam dataset for urban scene analysis.",
+          description: "Created a semantic segmentation model with 84% accuracy using the CityScapes DashCam dataset, applying deep learning techniques for detailed urban scene analysis.",
           image: urbanscene,
           technologies: ["Python", "TensorFlow", "Computer Vision"],
           links: {
