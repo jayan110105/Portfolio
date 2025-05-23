@@ -42,7 +42,7 @@ const Hero = () => {
           className="px-2"
         >
           <p className="text-xl md:text-2xl text-gray-600 mb-8">
-           Software Engineer & Tech Enthusiast 👨‍💻
+           Software Engineer & Full-Stack Developer 👨‍💻
           </p>
         </motion.div>
         <motion.div
