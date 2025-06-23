@@ -7,7 +7,7 @@ import { handleSubmit } from '@/app/actions'
 
 import { IconType } from 'react-icons';
 
-const SocialIcon = ({ href, icon: Icon }: { href: string; icon: IconType }) => (
+const SocialIcon = ({ href, icon: Icon, label }: { href: string; icon: IconType; label: string }) => (
   <motion.a
     href={href}
     target="_blank"
@@ -15,6 +15,7 @@ const SocialIcon = ({ href, icon: Icon }: { href: string; icon: IconType }) => (
     className="text-gray-400 hover:text-gray-600 transition-colors"
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}
+    aria-label={label}
   >
     <Icon className="w-8 h-8" />
   </motion.a>
@@ -57,14 +58,17 @@ const Contact = () => {
               <SocialIcon 
                 href="https://linkedin.com/in/jayan-paliwal" 
                 icon={FaLinkedin}
+                label="Visit my LinkedIn profile"
               />
               <SocialIcon 
                 href="https://twitter.com/JayanPaliwal" 
                 icon={FaTwitter}
+                label="Follow me on Twitter"
               />
               <SocialIcon 
                 href="https://github.com/jayan110105" 
                 icon={FaGithub}
+                label="View my GitHub repositories"
               />
             </div>
           </motion.div>
