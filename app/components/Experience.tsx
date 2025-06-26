@@ -3,6 +3,8 @@
 import Image, { StaticImageData } from "next/image"
 import prism from '../img/prism.png';
 import insight from '../img/infinite.jpeg';
+import ekam from '../img/ekam.png';
+
 import { motion } from "framer-motion";
 
 
@@ -53,8 +55,15 @@ const ExperienceCard = ({item, index
 const Experience = () => {
     const experiences = [
         {
+            logo: ekam,
+            date: "May 2025 – July 2025",
+            title: "Full Stack Developer Intern",
+            location: "Ekam Apps",
+            description: "Built a B2B SaaS platform using Next.js, TypeScript, and FastAPI to automate customer document collection via WhatsApp. Engineered an AI multi-agent workflow with CrewAI to handle document requests, validation, and extraction, which significantly improved operational efficiency. The platform featured a scalable multi-tenant backend, secure REST APIs, and integrated WhatsApp Business API for automated reminders, reducing manual coordination by 60%."
+        },
+        {
           logo: prism,
-          date: "August 2024 – Present",
+          date: "August 2024 – March 2025",
           title: "Research Intern",
           location: "Samsung PRISM",
           description: "Designed solutions for user health identification using smart home data in the IoT domain. Developed models for patient monitoring, fall detection, and anomaly detection."
