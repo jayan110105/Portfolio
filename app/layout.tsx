@@ -5,8 +5,8 @@ import { Analytics } from '@vercel/analytics/next';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Jayan Paliwal - Software Engineer & Tech Enthusiast',
-  description: 'Personal portfolio of Jayan Paliwal - Building innovative solutions at the intersection of IoT, healthcare, and AI.',
+  title: 'Jayan Paliwal - Software Engineer & Full Stack Developer',
+  description: 'Personal portfolio of Jayan Paliwal - Building full stack apps and AI tools ',
 }
 
 export default function RootLayout({
