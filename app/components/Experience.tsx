@@ -57,7 +57,7 @@ const Experience = () => {
         {
             logo: ekam,
             date: "May 2025 – July 2025",
-            title: "Full Stack Developer Intern",
+            title: "Founding Engineering Intern",
             location: "Ekam Apps",
             description: "Built a B2B SaaS platform using Next.js, TypeScript, and FastAPI to automate customer document collection via WhatsApp. Engineered an AI multi-agent workflow with CrewAI to handle document requests, validation, and extraction, which significantly improved operational efficiency. The platform featured a scalable multi-tenant backend, secure REST APIs, and integrated WhatsApp Business API for automated reminders, reducing manual coordination by 60%."
         },
